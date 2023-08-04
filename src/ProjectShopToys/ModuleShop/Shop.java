@@ -1,4 +1,4 @@
-package ModuleShop;
+package ProjectShopToys.ModuleShop;
 
 
 //    Модуль должен запускать:

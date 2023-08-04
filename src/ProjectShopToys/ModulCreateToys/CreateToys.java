@@ -1,15 +1,16 @@
-package ModulCreateToys;
+package ProjectShopToys.ModulCreateToys;
+
+import ProjectShopToys.ToysInterface;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public abstract class CreateToys {
-    public ArrayList<Toys> addToys(ArrayList<Toys> allToys){
+public abstract class CreateToys  extends Toys implements ToysInterface {
+    @Override
+    public ArrayList<Toys> addToys(ArrayList<Toys> allToys) {
 
-        Toys toys = new Toys();
-
+        Toy toy = new Toy();
         int count = 0;
-
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите название игрушки: ");
@@ -19,7 +20,14 @@ public abstract class CreateToys {
         int countToys = sc.nextInt();
 
         System.out.println("Введите частота выпадения игрушки: ");
-        int specificWeight = sc.nextInt();
+        double specificWeight = sc.nextDouble();
+
+        toy.setIdToys(count);
+        toy.setNameToys(nameToys);
+        toy.setCountToys(countToys);
+        toy.setSpecificWeight(specificWeight);
+
+        allToys.add(toy);
 
         return allToys;
     }

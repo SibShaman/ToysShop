@@ -1,6 +1,6 @@
-package ModulCreateToys;
+package ProjectShopToys.ModulCreateToys;
 
-public class Toys {
+public abstract class Toys {
 
     private int idToys;
     private String nameToys;
